@@ -23,15 +23,12 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-            Run Smarter
-            <br />
-            <span className="gradient-text">A/B Experiments</span>
+            <span className="gradient-text">At your service.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
-            JARVIS uses AI to automatically optimize your experiments, find winning variations faster,
-            and maximize your conversion rates with intelligent traffic allocation.
+            This is a simulation environment for testing JARVIS, Coframe&apos;s fully autonomous growth optimization agent.
           </p>
 
           {/* CTA Buttons */}
