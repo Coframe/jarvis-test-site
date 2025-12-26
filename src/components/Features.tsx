@@ -1,89 +1,125 @@
-const features = [
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    ),
-    title: "AI-Powered Optimization",
-    description: "Our machine learning algorithms automatically allocate traffic to winning variations, reducing time to significance by up to 40%.",
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
-    title: "Multi-Armed Bandit",
-    description: "Dynamically adjust traffic allocation based on real-time performance data, maximizing conversions even during the experiment.",
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
-    title: "Advanced Analytics",
-    description: "Deep dive into segment-level analysis, cohort tracking, and statistical significance calculations with clear visualizations.",
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-      </svg>
-    ),
-    title: "Visual Editor",
-    description: "Create and edit variations directly on your live site with our intuitive WYSIWYG editor. No code required.",
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: "Developer Friendly",
-    description: "Full-featured SDK with TypeScript support, REST APIs, and webhooks for seamless integration into your workflow.",
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-      </svg>
-    ),
-    title: "Enterprise Security",
-    description: "SOC 2 compliant with SSO, role-based access, audit logs, and data residency options for enterprise needs.",
-  },
-];
+import Link from "next/link";
 
 export default function Features() {
   return (
-    <section id="features" className="relative py-24 sm:py-32">
+    <section id="features" className="relative py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary">Features</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-            Everything you need to <span className="gradient-text">optimize conversions</span>
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="feature-badge">Features</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+            Expert-managed conversion
+            <br />
+            rate optimization, end-to-end.
           </h2>
           <p className="mt-4 text-lg text-muted">
-            Powerful experimentation tools designed to help you make data-driven decisions faster.
+            Generate code, copy, and images—personalized, deployed
+            instantly, and zero lift for your team.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="mx-auto mt-16 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="card-hover group rounded-2xl border border-white/10 bg-secondary/30 p-6 backdrop-blur-sm"
-            >
-              <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                {feature.icon}
+        {/* Feature Cards */}
+        <div className="mx-auto mt-16 max-w-6xl">
+          {/* CODE Card - Large */}
+          <div className="card-blue rounded-3xl p-8 sm:p-10 min-h-[400px] relative overflow-hidden">
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-white/80 text-sm font-medium mb-4">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                CODE
               </div>
-              <h3 className="mb-2 text-lg font-semibold">{feature.title}</h3>
-              <p className="text-sm text-muted">{feature.description}</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                UI, layout, and interactive elements.
+              </h3>
+              <p className="text-white/80 max-w-md">
+                Generate deployable components,
+                layouts, and experiments.
+              </p>
             </div>
-          ))}
+            {/* Decorative elements */}
+            <div className="absolute bottom-8 right-8 flex items-center gap-3 bg-white rounded-full px-4 py-2 shadow-lg">
+              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                <svg className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <span className="text-sm text-gray-700 font-medium">Create a modern testimonials section based on your knowledge of Coframe</span>
+            </div>
+          </div>
+
+          {/* Two smaller cards */}
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            {/* COPY Card */}
+            <div className="card-dark rounded-3xl p-8 min-h-[320px] relative overflow-hidden">
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 text-white/60 text-sm font-medium mb-4">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                  COPY
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-amber-400 mb-3">
+                  Performance-driven copy.
+                </h3>
+                <p className="text-white/60">
+                  Auto-generate headlines,
+                  CTAs, and full-page content.
+                </p>
+              </div>
+              {/* Mock UI element */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-white/10 backdrop-blur rounded-xl p-4">
+                  <div className="h-2 bg-white/20 rounded w-3/4 mb-2"></div>
+                  <div className="h-2 bg-white/20 rounded w-1/2"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* VISUALS Card */}
+            <div className="card-purple rounded-3xl p-8 min-h-[320px] relative overflow-hidden">
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 text-white/60 text-sm font-medium mb-4">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  VISUALS
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-amber-400 mb-3">
+                  On-brand image generation.
+                </h3>
+                <p className="text-white/60">
+                  Generate visuals that match your
+                  content, variant, and segment.
+                </p>
+              </div>
+              {/* Mock image grid */}
+              <div className="absolute bottom-6 left-6 right-6 flex gap-3">
+                <div className="flex-1 h-20 bg-white/20 rounded-lg"></div>
+                <div className="flex-1 h-20 bg-white/20 rounded-lg"></div>
+                <div className="flex-1 h-20 bg-white/20 rounded-lg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link
+            href="#"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-all hover:bg-primary/90"
+          >
+            Start for free
+            <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+          <Link
+            href="#"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-base font-medium text-foreground transition-all hover:bg-secondary"
+          >
+            Get a demo
+          </Link>
         </div>
       </div>
     </section>

@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #fafafa;
-  --primary: #6366f1;
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+  --primary: #1a1a2e;
   --primary-foreground: #ffffff;
-  --secondary: #1e1e2e;
-  --accent: #8b5cf6;
-  --muted: #71717a;
-  --border: #27272a;
+  --secondary: #f8f9fc;
+  --accent: #7c3aed;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card-blue: linear-gradient(135deg, #4a6cf7 0%, #7c8cf9 50%, #a8c0f0 100%);
+  --card-dark: #1a1a2e;
+  --card-purple: #6d28d9;
 }
 
 @theme inline {
@@ -53,32 +56,28 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Glow effect */
-.glow {
-  box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+/* Card styles */
+.card-blue {
+  background: linear-gradient(180deg, #5b7cfa 0%, #8ba4f8 100%);
 }
 
-.glow-sm {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+.card-dark {
+  background: #1a1a2e;
 }
 
-/* Animated gradient background */
-.animated-gradient {
-  background: linear-gradient(-45deg, #0a0a0f, #1a1a2e, #16213e, #0f3460);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+.card-purple {
+  background: #6d28d9;
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Light shadow for cards */
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* Card hover effect */
@@ -88,15 +87,26 @@ body {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Pulse animation */
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
-  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+/* Feature badge */
+.feature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7c3aed;
 }
 
-.pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+/* Section dark background */
+.section-dark {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
 }

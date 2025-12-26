@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   Product: [
@@ -31,21 +32,23 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-secondary/30">
+    <footer className="border-t border-border bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-6">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
-                <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <span className="text-xl font-bold">JARVIS</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="https://app.coframe.com/coframe-logo.svg"
+                alt="Coframe"
+                width={120}
+                height={28}
+                className="h-7 w-auto"
+                unoptimized
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted">
-              AI-powered CRO experimentation platform by Coframe. Make smarter decisions, faster.
+              AI-powered CRO experimentation platform. Make smarter decisions, faster.
             </p>
             {/* Social Links */}
             <div className="mt-6 flex gap-4">
@@ -70,7 +73,7 @@ export default function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="text-sm font-semibold">{category}</h3>
+              <h3 className="text-sm font-semibold text-foreground">{category}</h3>
               <ul className="mt-4 space-y-2">
                 {links.map((link) => (
                   <li key={link.label}>
@@ -88,7 +91,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
           <p className="text-sm text-muted">
             &copy; {new Date().getFullYear()} Coframe. All rights reserved.
           </p>

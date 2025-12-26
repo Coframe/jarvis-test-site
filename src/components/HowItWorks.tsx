@@ -47,15 +47,12 @@ console.log(results);
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-24 sm:py-32">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/50 to-transparent" />
-
+    <section id="how-it-works" className="relative py-16 sm:py-24 bg-secondary">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary">How It Works</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+          <span className="feature-badge">How It Works</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Up and running in <span className="gradient-text">minutes</span>
           </h2>
           <p className="mt-4 text-lg text-muted">
@@ -74,18 +71,18 @@ export default function HowItWorks() {
             >
               {/* Text Content */}
               <div className="flex-1 text-center lg:text-left">
-                <span className="text-5xl font-bold text-primary/30">{step.number}</span>
-                <h3 className="mt-4 text-2xl font-bold">{step.title}</h3>
+                <span className="text-5xl font-bold text-accent/30">{step.number}</span>
+                <h3 className="mt-4 text-2xl font-bold text-foreground">{step.title}</h3>
                 <p className="mt-2 text-lg text-muted">{step.description}</p>
               </div>
 
               {/* Code Block */}
               <div className="flex-1">
-                <div className="glow-sm overflow-hidden rounded-xl border border-white/10 bg-secondary">
-                  <div className="flex items-center gap-2 border-b border-white/10 bg-black/20 px-4 py-2">
-                    <div className="h-3 w-3 rounded-full bg-red-500/80" />
-                    <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
-                    <div className="h-3 w-3 rounded-full bg-green-500/80" />
+                <div className="overflow-hidden rounded-xl border border-border bg-white shadow-sm">
+                  <div className="flex items-center gap-2 border-b border-border bg-secondary px-4 py-2">
+                    <div className="h-3 w-3 rounded-full bg-red-400" />
+                    <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                    <div className="h-3 w-3 rounded-full bg-green-400" />
                     <span className="ml-2 text-xs text-muted">example.ts</span>
                   </div>
                   <pre className="overflow-x-auto p-4 text-sm">

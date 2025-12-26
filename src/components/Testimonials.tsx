@@ -24,14 +24,12 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-24 sm:py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
-
+    <section id="testimonials" className="relative py-16 sm:py-24 bg-secondary">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary">Testimonials</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+          <span className="feature-badge">Testimonials</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Loved by <span className="gradient-text">product teams</span>
           </h2>
           <p className="mt-4 text-lg text-muted">
@@ -44,7 +42,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="card-hover rounded-2xl border border-white/10 bg-secondary/30 p-6 backdrop-blur-sm"
+              className="card-hover rounded-2xl border border-border bg-white p-6 shadow-sm"
             >
               {/* Stars */}
               <div className="flex gap-1">
@@ -62,11 +60,11 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="mt-6 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-sm font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-accent to-purple-400 text-sm font-bold text-white">
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <p className="font-medium">{testimonial.author}</p>
+                  <p className="font-medium text-foreground">{testimonial.author}</p>
                   <p className="text-sm text-muted">
                     {testimonial.role}, {testimonial.company}
                   </p>
