@@ -13,8 +13,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
-            Generate code, copy, and images—personalized, deployed
-            instantly, and zero lift for your team.
+            This site is a simulation environment for testing JARVIS, Coframe&apos;s fully autonomous growth optimization agent.
           </p>
 
           {/* CTA Buttons */}
