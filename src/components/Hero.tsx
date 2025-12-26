@@ -8,9 +8,7 @@ export default function Hero() {
         <div className="mx-auto max-w-4xl text-center">
           {/* Headline */}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Expert-managed conversion
-            <br />
-            rate optimization, end-to-end.
+            At your service.
           </h1>
 
           {/* Subheadline */}
